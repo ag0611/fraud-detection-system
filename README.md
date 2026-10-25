@@ -68,3 +68,10 @@ Models are not committed; the commands above regenerate them (`model/` is git-ig
 ## Tech stack
 
 Python, pandas, scikit-learn, imbalanced-learn, XGBoost, LightGBM, Optuna, MLflow, SHAP, FastAPI, Streamlit, pytest, GitHub Actions.
+
+## Drift monitoring findings (train -> val/test)
+
+- Fraud rate fell from 0.184% (train) to 0.129% (val) and 0.122% (test).
+- Input feature drift is large: 6 features exceed PSI 0.2 on val and 7 on test (V1 1.01, V3 0.75, V28 0.53, V11 0.34, V25 0.29 on test).
+- Model score drift is negligible (PSI 0.008, mean score 0.00160 to 0.00146), and test ROC-AUC (0.983) matches validation, so the retrain rule fired on features only.
+- Hypothesis (not verified): since the data covers about two days, part of the feature shift is likely time-of-day mix rather than true concept drift. A production setup should treat feature drift as "investigate" and require score drift or a measured performance drop before retraining.

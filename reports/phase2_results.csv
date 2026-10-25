@@ -1,0 +1,10 @@
+model,strategy,pr_auc,pr_auc_lo,pr_auc_hi,recall@p80,roc_auc,secs
+random_forest,smote,0.8708,0.7922,0.9511,0.8182,0.9924,31.6
+random_forest,class_weight,0.8707,0.7909,0.9519,0.8182,0.9709,18.4
+random_forest,none,0.8618,0.779,0.9492,0.8545,0.9696,28.1
+random_forest,undersample,0.8446,0.7609,0.9359,0.8182,0.9805,3.3
+logreg,class_weight,0.8098,0.7161,0.9049,0.7455,0.9813,3.6
+logreg,smote,0.8035,0.7128,0.904,0.6545,0.9781,3.7
+logreg,none,0.7574,0.6476,0.8705,0.4545,0.9799,3.4
+logreg,undersample,0.5405,0.4193,0.6896,0.0364,0.9793,2.8
+dummy,none,0.0013,0.001,0.0016,0.0,0.5,1.4

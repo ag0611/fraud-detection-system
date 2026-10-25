@@ -1,0 +1,8 @@
+{
+  "model": "xgboost",
+  "calibration": "raw",
+  "threshold": 0.16,
+  "c_fp": 5.0,
+  "val_cost": 239.54000000000002,
+  "val_cost_at_0.5": 422.56
+}

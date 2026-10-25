@@ -36,3 +36,6 @@ logs/
 Thumbs.db
 .vscode/
 .idea/
+mlflow.db
+mlartifacts/
+model/

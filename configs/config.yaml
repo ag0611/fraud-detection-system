@@ -1,0 +1,15 @@
+﻿seed: 42
+
+paths:
+  raw_data: data/creditcard.csv
+  processed_dir: data/processed
+  figures_dir: reports/figures
+
+columns:
+  target: Class
+  time: Time
+  amount: Amount
+
+split:
+  train_frac: 0.70
+  val_frac: 0.15

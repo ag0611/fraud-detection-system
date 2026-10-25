@@ -1,0 +1,38 @@
+﻿# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Data
+data/*.csv
+data/*.parquet
+data/processed/
+!data/.gitkeep
+
+# Models / experiments
+mlruns/
+*.joblib
+*.pkl
+*.h5
+*.pt
+optuna.db
+
+# Reports / logs
+reports/*.html
+*.log
+logs/
+
+# System / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

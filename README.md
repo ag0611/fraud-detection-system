@@ -103,7 +103,6 @@ streamlit run app/dashboard.py
 pytest -q
 ```
 
-API documentation: http://localhost:8000/docs
 
 Run `final_test` only when intentionally performing the final held-out evaluation. The reported test result was generated once. Prepare and train the model before starting the API or dashboard.
 
@@ -114,19 +113,29 @@ fraud-detection-system/
 ├── .github/workflows/ci.yml
 ├── app/dashboard.py
 ├── configs/config.yaml
-├── data/                  # Local dataset; Git-ignored
-├── deploy/                # Streamlit Cloud app
-├── docs/dashboard.png     # Dashboard screenshot
-├── notebooks/
-├── reports/figures/       # Evaluation and monitoring plots
+├── data/                  # Local data; Git-ignored
+├── deploy/
+│   ├── streamlit_app.py
+│   ├── xgb_model.json
+│   ├── preprocess.json
+│   └── requirements.txt
+├── docs/dashboard.png
+├── notebooks/eda.py
+├── reports/
+│   ├── figures/
+│   ├── final_test_report.json
+│   ├── drift_report.csv
+│   └── phase*_results.csv
 ├── src/
+│   ├── api/
 │   ├── data/
 │   ├── features/
 │   ├── models/
-│   ├── api/
 │   └── monitoring/
 ├── tests/
+├── conftest.py
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 

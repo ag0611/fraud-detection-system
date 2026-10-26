@@ -39,3 +39,5 @@ Thumbs.db
 mlflow.db
 mlartifacts/
 model/
+.pytest_cache/
+*.egg-info/

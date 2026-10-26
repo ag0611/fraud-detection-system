@@ -41,3 +41,5 @@ mlartifacts/
 model/
 .pytest_cache/
 *.egg-info/
+.pytest_cache/
+*.egg-info/
